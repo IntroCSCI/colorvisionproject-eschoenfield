@@ -9,7 +9,7 @@ My program will ask the user for the number of colors they'd like in their palet
 
 ### v1.0 Updates
 
-*Coming soon*
+I updated my program to display the remaining colors are left in Paul Tol's color scheme so people wouldn't choose the same color for all of their options.
 
 
 ## Developer
@@ -20,7 +20,7 @@ Ely Schoenfield
 
 To run the program, give the following commands:
 Enter a number between 2 and 8 for the amount of colors wanted.
-Choose the colors you'd like from the list. 
+Choose the colors you'd like from the list of remaining colors. 
 Then enter the file name and file type to save the palette to.
 ```
 g++ --std=c++11 *.cpp -o cvp
@@ -32,16 +32,35 @@ Here is an example of the program running:
 ```
 Enter the number of colors you would like in the palette
 (Need 2-8 colors) 
-4
-Type 4 colors from the list: blue, green, seafoam green, cyan, tan, pink, purple, and burgundy
+2
+Type 2 colors from the list:
+blue,
+green,
+sea,
+cyan,
+tan,
+pink,
+purple,
+burgundy
 blue
-1/4 colors chosen 
+remaining colors:
 green
-2/4 colors chosen 
+sea
+cyan
 tan
-3/4 colors chosen 
+pink
 purple
-4/4 colors chosen 
+burgundy
+1/2 colors chosen.
+green
+remaining colors:
+sea
+cyan
+tan
+pink
+purple
+burgundy
+2/2 colors chosen.
 Name the file you would like to save the palette to: 
 colors.css
 ```
@@ -51,8 +70,6 @@ colors.css
 ### Variables and Data Types
 string fileName is used for saving the name of the file that the user inputs.
 int numColor saves the number of colors the user requested.
-string listColors[8] is an array that contains eight different hexadecimal values from Tol's color scheme.
-vector <string> chosenPalette is a vector that is used to save the user's chosen colors.
 
 ### Console Input and Output
 My program gets console input with cin from the user for the amount of colors and the file name.
@@ -76,7 +93,7 @@ ios::out is used for file output operations like saving the colors.
 filePalette << saves distinct color values to the user named file. 
 
 ### Arrays/Vectors
-vector <string> listColors is a an array that holds the hexadecimal values of Tol's color scheme as a string.
+string listColors[8] is a an array that holds the hexadecimal values of Tol's color scheme as a string.
 vector <string> chosenPalette is a vector that is used to save the user's chosen colors.
 
 
@@ -87,4 +104,4 @@ Function void pickColor(string &) changes the color to a hexadecimal value.
 
 ### Classes
 
-*Coming in version 1.0*
+The class colors is used to erase a color from the vector colorsRemaining and print the remaining colors.
