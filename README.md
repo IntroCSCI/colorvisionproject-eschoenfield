@@ -68,18 +68,20 @@ colors.css
 ## C++ Guide
 
 ### Variables and Data Types
-string fileName is used for saving the name of the file that the user inputs.
 int numColor saves the number of colors the user requested.
+string chosenColor saves the color the user inputs.
+string fileName is used for saving the name of the file that the user inputs.
+string wordedColor saves the color input as a string and is used to remove the color from the colorsRemaining vector. 
+int arraySize saves the size of the listColors array as an int and is used in a for loop.
 
 ### Console Input and Output
 My program gets console input with cin from the user for the amount of colors and the file name.
-Console output is used when asking the user for the number of colors, not enough colors, too many colors, colors they'd like in their palette, how many colors are currently chosen for the user's palette, and the file name to save the palette to.
+Console output is used when asking the user for the number of colors, not enough colors, too many colors, colors they'd like in their palette, how many colors are currently chosen for the user's palette, list of remaining colors to choose from, and the file name to save the palette to.
 
 ### Decisions
-if the number of colors is less than 2, then ask for the amount of colors again.
-if the number of colors is more than 8, then ask for the amount of colors again.
-if the function that checks if the user input matches a color in Tol's palette is true then enter hexadecimal value in vector chosenPalette.
-if the file to save the palette opens then copy vector chosenPalette into the file.   
+if statement to check if the checkColor function returns true then enter hexadecimal value in vector chosenPalette.
+if statement to check if the file to save the palette opens then copy vector chosenPalette into the file.
+if statements in the pickColor function to change worded colors  to their hexadecimal values.  
 
 ### Iteration
 Nested do/while loop that determines if user input for the number of colors is at least 2 and at most 8.
@@ -95,11 +97,12 @@ filePalette << saves distinct color values to the user named file.
 ### Arrays/Vectors
 string listColors[8] is a an array that holds the hexadecimal values of Tol's color scheme as a string.
 vector <string> chosenPalette is a vector that is used to save the user's chosen colors.
+vector <string> colorsRemaining is used to display the remaning colors that are available to choose from. 
 
 
 ### Functions
 
-Function bool checkColor(vector <string>, string) checks if the color entered is on the available list and returns true or false. 
+Function bool checkColor(string Colors[], string, int) checks if the color entered is on the available list and returns true or false. 
 Function void pickColor(string &) changes the color to a hexadecimal value.
 
 ### Classes
