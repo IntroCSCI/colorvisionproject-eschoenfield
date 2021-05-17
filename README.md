@@ -71,7 +71,7 @@ colors.css
 int numColor saves the number of colors the user requested.
 string chosenColor saves the color the user inputs.
 string fileName is used for saving the name of the file that the user inputs.
-string wordedColor saves the color input as a string and is used to remove the color from the colorsRemaining vector. 
+string wordedColor saves the color input as a string before changing to hexademical value and is used to remove the color from the colorsRemaining vector. 
 int arraySize saves the size of the listColors array as an int and is used in a for loop.
 
 ### Console Input and Output
